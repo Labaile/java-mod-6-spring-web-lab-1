@@ -5,6 +5,7 @@ package com.example.Access.Camp.model;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
@@ -49,6 +50,13 @@ public class Signups {
     public void setTime(int time) {
         this.time = time;
     }
+
+    public void add(Signups signups) {
+    }
+
+    @ManyToOne
+    private Campers campers;
+
 
 
 }
