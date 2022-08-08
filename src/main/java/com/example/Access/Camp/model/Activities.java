@@ -12,6 +12,10 @@ public class Activities {
     @GeneratedValue
     private int id;
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @NotNull
     @NotBlank
     private String name;

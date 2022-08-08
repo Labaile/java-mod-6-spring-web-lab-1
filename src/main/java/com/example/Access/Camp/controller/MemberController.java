@@ -18,28 +18,28 @@ public class MemberController {
     @Autowired
     MemberService memberService;
 
-    @PostMapping("/members")
+    @PostMapping("/campers")
     public ResponseEntity<Campers> createMember(@Valid @RequestBody Campers member) {
         Campers newMember = memberService.createMember(member);
         return ResponseEntity.ok(newMember);
     }
 
-    @GetMapping("/members")
+    @GetMapping("/campers")
     public List<Campers> readMembers() {
         return memberService.getMembers();
     }
 
-    @GetMapping("/members/{memberId}")
+    @GetMapping("/campers/{memberId}")
     public Campers readMember(@PathVariable(value = "memberId") Integer id) {
         return memberService.getMember(id);
     }
 
-    @PutMapping("/members/{memberId}")
+    @PutMapping("/campers/{memberId}")
     public Campers updateMember(@PathVariable(value = "memberId") Integer id, @RequestBody Campers memberData) {
         return memberService.updateMember(id, memberData);
     }
 
-    @DeleteMapping("/members/{memberId}")
+    @DeleteMapping("/campers/{memberId}")
     public void deleteMember(@PathVariable(value = "memberId") Integer id) {
         memberService.deleteMember(id);
     }
