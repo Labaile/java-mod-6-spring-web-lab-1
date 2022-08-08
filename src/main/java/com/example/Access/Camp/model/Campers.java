@@ -10,7 +10,8 @@ import javax.validation.constraints.NotNull;
 
 @Entity
 public class Campers {
-    @Id@GeneratedValue
+    @Id
+    @GeneratedValue
     private int id;
     @NotNull
     @NotBlank

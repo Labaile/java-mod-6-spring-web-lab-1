@@ -9,8 +9,9 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 @Entity
-
 public class Signups {
+    @Id
+    @GeneratedValue
     private int id;
     private int camper_id;
     private int activity_id;
